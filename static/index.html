@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="/static/main.js" defer></script>
+        <link rel="stylesheet" href="/static/styles.css">
+    </head>
+    <body>
+        <div class="content">
+            <h1>Carlson's Gift Tracker!</h1>
+            <img src="https://haxmas.hackclub.com/haxmas-logo.png">
+            <p>Tracking gifts since 2025</p>
+            <form id="giftForm">
+                <label for="name">First name: </label>
+                <input id="name" type="text" name="name" required>
+                <br>
+                <label for="gift">Gift: </label>
+                <input id="gift" type="text" name="gift" required>
+                <br>
+                <input type="submit" value="Submit!">
+            </form>
+            <div id="gifts"></div>
+        </div>
+    </body>
+</html>
