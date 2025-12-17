@@ -52,7 +52,7 @@ def login():
 @app.post("/gifts")
 def create_gift():
     if not flask.session.get("authed"):
-        return "Unauthorized", 401
+        return "Unauthorised", 401
     data = flask.request.get_json()
     name = data.get('name')
     gift = data.get('gift')
@@ -79,4 +79,5 @@ def get_gifts():
     return flask.jsonify(gifts)
 
 if __name__ == "__main__":
-    app.run()
+    port = int(os.environ.get("PORT", "5000"))
+    app.run(host="0.0.0.0", port=port)
